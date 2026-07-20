@@ -39,7 +39,7 @@ function bookingEmailHtml(b: BookingDetails): string {
     <p>Hi ${escapeHtml(b.firstName)}, thanks for booking with ${businessInfo.name}! Here's what was requested:</p>
     <ul>
       <li><strong>Name:</strong> ${escapeHtml(b.firstName)} ${escapeHtml(b.lastName)}</li>
-      <li><strong>Service:</strong> ${escapeHtml(b.service.name)} ($${b.service.price})</li>
+      <li><strong>Service:</strong> ${escapeHtml(b.service.name)} ($${b.service.price} card / $${b.service.priceCash} cash)</li>
       <li><strong>Date:</strong> ${formatDisplayDate(b.date)}</li>
       <li><strong>Time:</strong> ${formatTimeLabel(b.time)}</li>
       <li><strong>Email:</strong> ${escapeHtml(b.email)}</li>

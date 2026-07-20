@@ -161,8 +161,12 @@ export default function BookingModal() {
                           className="flex w-full items-center justify-between rounded-lg border border-gold/30 bg-white/50 px-4 py-3 text-left transition hover:border-gold hover:bg-cream-alt"
                         >
                           <span>{service.name}</span>
-                          <span className="font-semibold text-espresso-light">
-                            ${service.price}
+                          <span className="flex shrink-0 items-baseline gap-2 text-sm font-semibold text-espresso-light">
+                            <span title="Card price">${service.price} Card</span>
+                            <span className="text-espresso-light/50">/</span>
+                            <span title="Cash price" className="text-gold-dark">
+                              ${service.priceCash} Cash
+                            </span>
                           </span>
                         </button>
                       </li>
@@ -181,8 +185,11 @@ export default function BookingModal() {
                   <p className="font-semibold">{selectedService.name}</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-lg text-gold-dark">
-                    ${selectedService.price}
+                  <p className="font-display text-lg text-espresso">
+                    ${selectedService.price} <span className="text-sm">Card</span>
+                  </p>
+                  <p className="text-sm font-semibold text-gold-dark">
+                    ${selectedService.priceCash} Cash
                   </p>
                   <button
                     type="button"

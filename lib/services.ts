@@ -2,6 +2,7 @@ export interface Service {
   id: string;
   name: string;
   price: number;
+  priceCash: number;
 }
 
 export interface ServiceCategory {
@@ -12,38 +13,23 @@ export interface ServiceCategory {
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: "barber",
-    title: "Barber Services",
+    id: "men",
+    title: "Men",
     services: [
-      { id: "classic-haircut", name: "Classic Haircut", price: 40 },
-      { id: "skin-fade", name: "Skin Fade", price: 45 },
-      { id: "buzz-cut", name: "Buzz Cut", price: 28 },
-      { id: "scissor-cut", name: "Scissor Cut", price: 45 },
-      { id: "long-hair-cut", name: "Long Hair Cut", price: 50 },
-      { id: "kids-haircut", name: "Kids Haircut (12 & Under)", price: 35 },
-      { id: "senior-haircut", name: "Senior Haircut (65+)", price: 35 },
+      { id: "regular", name: "Regular", price: 30, priceCash: 27 },
+      { id: "zero-fade", name: "Zero Fade", price: 35, priceCash: 32 },
+      { id: "beard-trim-shave", name: "Beard Trim/Shave", price: 23, priceCash: 20 },
+      { id: "hot-towel-shave", name: "Hot Towel Shave", price: 35, priceCash: 32 },
+      { id: "buzz-cut", name: "Buzz Cut (One Length)", price: 25, priceCash: 22 },
     ],
   },
   {
-    id: "beard",
-    title: "Beard Services",
+    id: "kid-seniors",
+    title: "Kids (12 & Under) & Seniors (65+)",
     services: [
-      { id: "beard-trim", name: "Beard Trim", price: 20 },
-      { id: "beard-shape-lineup", name: "Beard Shape & Line-Up", price: 25 },
-      { id: "hot-towel-beard-trim", name: "Hot Towel Beard Trim", price: 30 },
-    ],
-  },
-  {
-    id: "combo",
-    title: "Combo Packages",
-    services: [
-      { id: "haircut-beard-trim", name: "Haircut + Beard Trim", price: 60 },
-      { id: "skin-fade-beard", name: "Skin Fade + Beard", price: 65 },
-      {
-        id: "deluxe-grooming",
-        name: "Deluxe Grooming (Haircut + Beard + Hot Towel + Shampoo)",
-        price: 75,
-      },
+      { id: "regular-kid-seniors", name: "Regular", price: 25, priceCash: 22 },
+      { id: "zero-fade-kid-seniors", name: "Zero Fade", price: 30, priceCash: 27 },
+      { id: "buzz-fade-kid-seniors", name: "Buzz Fade (One Length)", price: 23, priceCash: 20 },
     ],
   },
 ];

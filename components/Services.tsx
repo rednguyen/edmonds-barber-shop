@@ -1,11 +1,7 @@
-"use client";
-
+import { Fragment } from "react";
 import { serviceCategories } from "@/lib/services";
-import { useBooking } from "@/components/BookingProvider";
 
 export default function Services() {
-  const { openBooking } = useBooking();
-
   return (
     <section id="services" className="bg-cream-alt px-5 py-16">
       <div className="mx-auto max-w-5xl">
@@ -14,20 +10,28 @@ export default function Services() {
           {serviceCategories.map((category) => (
             <div key={category.id} className="rounded-2xl bg-white/60 p-6 shadow-sm">
               <h3 className="font-display text-xl text-espresso-light">{category.title}</h3>
-              <ul className="mt-4 space-y-3">
+
+              <div className="mt-4 grid grid-cols-[1fr_auto_auto] items-center gap-x-4 gap-y-2">
+                <div />
+                <div className="text-right text-xs font-semibold tracking-wide text-espresso-light uppercase">
+                  With Card
+                </div>
+                <div className="text-right text-xs font-semibold tracking-wide text-gold-dark uppercase">
+                  Cash Discount
+                </div>
+
                 {category.services.map((service) => (
-                  <li key={service.id}>
-                    <button
-                      type="button"
-                      onClick={() => openBooking(service.id)}
-                      className="flex w-full items-center justify-between border-b border-gold/20 pb-2 text-left transition hover:text-gold-dark"
-                    >
-                      <span>{service.name}</span>
-                      <span className="font-semibold">${service.price}</span>
-                    </button>
-                  </li>
+                  <Fragment key={service.id}>
+                    <div className="border-b border-gold/20 pb-2">{service.name}</div>
+                    <div className="border-b border-gold/20 pb-2 text-right font-semibold">
+                      ${service.price}
+                    </div>
+                    <div className="border-b border-gold/20 pb-2 text-right font-semibold text-gold-dark">
+                      ${service.priceCash}
+                    </div>
+                  </Fragment>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

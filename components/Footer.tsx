@@ -8,14 +8,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
         <h2 className="font-display text-2xl">{businessInfo.name}</h2>
 
-        <div className="flex flex-col gap-1 text-cream/80 sm:flex-row sm:gap-6">
-          <a href={`tel:${businessInfo.phone}`} className="hover:text-gold">
-            {businessInfo.phone}
-          </a>
-          <a href={`mailto:${businessInfo.email}`} className="hover:text-gold">
-            {businessInfo.email}
-          </a>
-        </div>
+        <a href={`tel:${businessInfo.phone}`} className="text-cream/80 hover:text-gold">
+          {businessInfo.phone}
+        </a>
 
         <div className="flex items-center gap-5">
           <a

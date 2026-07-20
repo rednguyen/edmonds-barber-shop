@@ -5,11 +5,10 @@ import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
 import HoursLocation from "@/components/HoursLocation";
 import Footer from "@/components/Footer";
-import BookNowButton from "@/components/BookNowButton";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-1 flex-col pb-24 sm:pb-0">
+    <div className="flex min-h-screen flex-1 flex-col">
       <Header />
       <main className="flex-1">
         <Hero />
@@ -19,7 +18,6 @@ export default function Home() {
         <HoursLocation />
       </main>
       <Footer />
-      <BookNowButton />
     </div>
   );
 }
