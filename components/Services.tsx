@@ -11,7 +11,7 @@ export default function Services() {
             <div key={category.id} className="rounded-2xl bg-white/60 p-6 shadow-sm">
               <h3 className="font-display text-xl text-espresso-light">{category.title}</h3>
 
-              <div className="mt-4 grid grid-cols-[1fr_auto_auto] items-center gap-x-4 gap-y-2">
+              <div className="mt-4 grid grid-cols-[1fr_auto_auto] items-center gap-x-4 gap-y-3">
                 <div />
                 <div className="text-right text-xs font-semibold tracking-wide text-espresso-light uppercase">
                   With Card
@@ -19,14 +19,13 @@ export default function Services() {
                 <div className="text-right text-xs font-semibold tracking-wide text-gold-dark uppercase">
                   Cash Discount
                 </div>
+                <div className="col-span-3 border-b border-gold/20" />
 
                 {category.services.map((service) => (
                   <Fragment key={service.id}>
-                    <div className="border-b border-gold/20 pb-2">{service.name}</div>
-                    <div className="border-b border-gold/20 pb-2 text-right font-semibold">
-                      ${service.price}
-                    </div>
-                    <div className="border-b border-gold/20 pb-2 text-right font-semibold text-gold-dark">
+                    <div>{service.name}</div>
+                    <div className="text-right font-semibold">${service.price}</div>
+                    <div className="text-right font-semibold text-gold-dark">
                       ${service.priceCash}
                     </div>
                   </Fragment>
