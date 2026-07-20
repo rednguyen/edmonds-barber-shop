@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="Gallery photo placeholder">
+  <rect width="400" height="300" fill="#F4E8D8"/>
+  <rect x="8" y="8" width="384" height="284" fill="none" stroke="#A9822F" stroke-width="2" stroke-dasharray="8 6"/>
+  <g stroke="#3B2A1E" stroke-width="4" stroke-linecap="round" fill="none">
+    <circle cx="160" cy="160" r="14"/>
+    <circle cx="160" cy="200" r="14"/>
+    <line x1="172" y1="150" x2="240" y2="90"/>
+    <line x1="172" y1="210" x2="240" y2="270"/>
+    <line x1="150" y1="180" x2="240" y2="180"/>
+  </g>
+  <text x="200" y="240" font-family="Georgia, serif" font-size="16" fill="#3B2A1E" text-anchor="middle">Shop photo coming soon</text>
+</svg>
